@@ -1,0 +1,347 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+body #errorText {
+  display: none;
+  font-family: OpenSans;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: center;
+  width: 70vw;
+  height: auto;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  height: 80vh;
+  min-width: 1100px;
+  width: 100%;
+  padding: 0 50px;
+}
+main .ustensils {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: 350px;
+}
+main .ustensils__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 600px;
+  height: 60%;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+main .ustensils__container .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+main .ustensils__container .colors__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+main .ustensils__container .colors__line:last-child {
+  margin-top: 20px;
+}
+main .ustensils__container .colors__line .color {
+  width: 40px;
+  height: 40px;
+  outline: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .ustensils__container .range__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+main .ustensils__container .range__container #rangeInput {
+  width: 250px;
+  cursor: pointer;
+}
+main .ustensils__container .range__container #rangeLabel {
+  font-family: OpenSans;
+  font-size: 1rem;
+}
+main .ustensils__container .range__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 120px;
+  height: 120px;
+}
+main .ustensils__container .range__value #rangeDisplay {
+  border-radius: 50%;
+  background-color: skyblue;
+  aspect-ratio: 1/1;
+}
+main .ustensils__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+main .ustensils__undo, main .ustensils__reset {
+  width: 120px;
+  height: 40px;
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: OpenSans;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main .ustensils__undo:hover, main .ustensils__reset:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+main .ustensils__reset {
+  background-color: red;
+}
+main .drawer {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+main .drawer__canvas {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  cursor: crosshair;
+}
+
+#red {
+  background-color: #ff0000;
+}
+
+#orangeRed {
+  background-color: #ff4500;
+}
+
+#orange {
+  background-color: #ffa500;
+}
+
+#goldenOrange {
+  background-color: #ffd700;
+}
+
+#yellow {
+  background-color: #ffff00;
+}
+
+#lightLime {
+  background-color: #d6ff17;
+}
+
+#yellowChartreuse {
+  background-color: #adff2f;
+}
+
+#greenChartreuse {
+  background-color: #7fff00;
+}
+
+#limeGreen {
+  background-color: #00ff00;
+}
+
+#green {
+  background-color: #008000;
+}
+
+#emerauldGreen {
+  background-color: #1f9a45;
+}
+
+#mintGreen {
+  background-color: #3eb489;
+}
+
+#cyan {
+  background-color: #00ffff;
+}
+
+#skyblue {
+  background-color: #87ceeb;
+}
+
+#oceanBlue {
+  background-color: #007fff;
+}
+
+#blue {
+  background-color: #0000ff;
+}
+
+#slateBlue {
+  background-color: #6a5acd;
+}
+
+#indigo {
+  background-color: #4b0082;
+}
+
+#blueViolet {
+  background-color: #8a2be2;
+}
+
+#violet {
+  background-color: #8b00ff;
+}
+
+#purple {
+  background-color: #800080;
+}
+
+#magenta {
+  background-color: #ff00ff;
+}
+
+#fuschiaPink {
+  background-color: #ff77ff;
+}
+
+#pink {
+  background-color: #ffc0cb;
+}
+
+#indianRed {
+  background-color: #cd5c5c;
+}
+
+#brown {
+  background-color: #a52a2a;
+}
+
+#sienna {
+  background-color: #8b4513;
+}
+
+#beige {
+  background-color: #f5f5dc;
+}
+
+#sandYellow {
+  background-color: #c2b280;
+}
+
+#oliveGreen {
+  background-color: #808000;
+}
+
+#white {
+  background-color: #ffffff;
+}
+
+#grey1 {
+  background-color: #cccccc;
+}
+
+#grey2 {
+  background-color: #999999;
+}
+
+#grey3 {
+  background-color: #666666;
+}
+
+#grey4 {
+  background-color: #333333;
+}
+
+#black {
+  background-color: #000000;
+}/*# sourceMappingURL=index.css.map */

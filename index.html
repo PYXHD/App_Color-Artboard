@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawer</title>
+
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+  </head>
+
+  <body>
+    <div id="errorText">
+      Pour une meilleure expérience, veuillez utiliser un écran de plus de 1024
+      pixels de large.
+    </div>
+    <main>
+      <section class="ustensils">
+        <div class="ustensils__container">
+          <div class="colors">
+            <div class="colors__line">
+              <!-- First line -->
+              <div class="color" id="red"></div>
+              <div class="color" id="orangeRed"></div>
+              <div class="color" id="orange"></div>
+              <div class="color" id="goldenOrange"></div>
+              <div class="color" id="yellow"></div>
+              <div class="color" id="lightLime"></div>
+            </div>
+            <div class="colors__line">
+              <!-- Second line -->
+              <div class="color" id="yellowChartreuse"></div>
+              <div class="color" id="greenChartreuse"></div>
+              <div class="color" id="limeGreen"></div>
+              <div class="color" id="green"></div>
+              <div class="color" id="emerauldGreen"></div>
+              <div class="color" id="mintGreen"></div>
+            </div>
+            <div class="colors__line">
+              <!-- Third line -->
+              <div class="color" id="cyan"></div>
+              <div class="color" id="skyblue"></div>
+              <div class="color" id="oceanBlue"></div>
+              <div class="color" id="blue"></div>
+              <div class="color" id="slateBlue"></div>
+              <div class="color" id="indigo"></div>
+            </div>
+            <div class="colors__line">
+              <!-- Fourth line -->
+              <div class="color" id="blueViolet"></div>
+              <div class="color" id="violet"></div>
+              <div class="color" id="purple"></div>
+              <div class="color" id="magenta"></div>
+              <div class="color" id="fuschiaPink"></div>
+              <div class="color" id="pink"></div>
+            </div>
+            <div class="colors__line">
+              <!-- Fifth line -->
+              <div class="color" id="indianRed"></div>
+              <div class="color" id="brown"></div>
+              <div class="color" id="sienna"></div>
+              <div class="color" id="beige"></div>
+              <div class="color" id="sandYellow"></div>
+              <div class="color" id="oliveGreen"></div>
+            </div>
+            <div class="colors__line">
+              <!-- Sixth line -->
+              <div class="color" id="white"></div>
+              <div class="color" id="grey1"></div>
+              <div class="color" id="grey2"></div>
+              <div class="color" id="grey3"></div>
+              <div class="color" id="grey4"></div>
+              <div class="color" id="black"></div>
+            </div>
+          </div>
+
+          <div class="range__container">
+            <input
+              type="range"
+              name="range"
+              id="rangeInput"
+              min="5"
+              max="100"
+              step="1"
+              value="5"
+            />
+            <label for="range" id="rangeLabel"></label>
+          </div>
+
+          <div class="range__value">
+            <div class="range__value__display" id="rangeDisplay"></div>
+          </div>
+        </div>
+
+        <div class="ustensils__btns">
+          <input
+            type="button"
+            class="ustensils__undo"
+            id="undoBtn"
+            value="Annuler"
+          />
+          <input
+            type="button"
+            class="ustensils__reset"
+            id="reset"
+            value="Effacer"
+          />
+        </div>
+      </section>
+
+      <section class="drawer" id="drawer">
+        <canvas class="drawer__canvas" id="drawZone"></canvas>
+      </section>
+    </main>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

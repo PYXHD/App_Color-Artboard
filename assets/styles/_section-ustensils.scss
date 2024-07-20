@@ -1,0 +1,113 @@
+main {
+  @include flex(flex, null, space-between, null, 50px);
+  height: 80vh;
+  min-width: 1100px;
+  width: 100%;
+  padding: 0 50px;
+
+  .ustensils {
+    @include flex(flex, column, center, center, 10px);
+    width: 350px;
+
+    &__container {
+      @include flex(flex, column, space-between, center, null);
+      min-height: 600px;
+      height: 60%;
+      width: 100%;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 20px;
+
+      .colors {
+        @include flex(flex, column, null, null, 20px);
+        width: 100%;
+
+        &__line {
+          @include flex(flex, null, space-between, null, null);
+          display: flex;
+          justify-content: space-between;
+
+          &:last-child {
+            margin-top: 20px;
+          }
+
+          .color {
+            width: 40px;
+            height: 40px;
+            outline: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            // background-color: _colors.scss
+          }
+        }
+      }
+
+      .range__container {
+        @include flex(flex, null, space-between, null, null);
+        width: 100%;
+
+        #rangeInput {
+          width: 250px;
+          cursor: pointer;
+        }
+        #rangeLabel {
+          font-family: OpenSans;
+          font-size: 1rem;
+        }
+      }
+
+      .range__value {
+        @include flex(flex, null, center, center, null);
+        width: 120px;
+        height: 120px;
+
+        #rangeDisplay {
+          border-radius: 50%;
+          background-color: skyblue;
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+
+    &__btns {
+      @include flex(flex, row, space-evenly, null, null);
+      width: 100%;
+    }
+
+    &__undo,
+    &__reset {
+      width: 120px;
+      height: 40px;
+      background-color: green;
+      border: 1px solid black;
+      border-radius: 10px;
+      font-family: OpenSans;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__reset {
+      background-color: red;
+    }
+  }
+
+  .drawer {
+    flex-grow: 1;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &__canvas {
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      cursor: crosshair;
+    }
+  }
+}
